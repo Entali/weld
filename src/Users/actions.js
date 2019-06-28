@@ -1,4 +1,4 @@
-import {API_URL} from '../constants';
+import {API} from './api';
 import {FETCH_USERS, LOAD_USERS, FAILED_USERS} from './constants';
 
 function fetchUsers() {
@@ -26,7 +26,7 @@ export function initUsers() {
     dispatch(fetchUsers());
 
     try {
-      let response = await fetch(`${API_URL}/users`);
+      let response = await API.getUsers('users');
       let users = await response.json();
       dispatch(loadUsers(users));
     } catch (e) {
