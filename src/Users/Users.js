@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {VerticalSpinner} from "../VerticalSpinner";
+import './Users.scss';
 
 class Users extends Component {
 
@@ -8,9 +10,11 @@ class Users extends Component {
   }
 
   render() {
+    const { users: {isFetching, isError, list} } = this.props;
+
     return (
         <div className="Users">
-          Users
+          {isFetching ? <VerticalSpinner/> : <p>Users</p>}
         </div>
     );
   }

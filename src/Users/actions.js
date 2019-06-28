@@ -28,7 +28,11 @@ export function initUsers() {
     try {
       let response = await API.getUsers('users');
       let users = await response.json();
-      dispatch(loadUsers(users));
+
+      // This counter is only to show you a fancy loading )
+      setTimeout(() => {
+        dispatch(loadUsers(users));
+      }, 7000);
     } catch (e) {
       dispatch(failUsers(e));
     }

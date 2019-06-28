@@ -1,0 +1,13 @@
+.Logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+
+  &__img {
+
+    &:hover {
+      animation: rotateOut 0.6s ease-in-out;
+    }
+  }
+}

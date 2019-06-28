@@ -1,0 +1,47 @@
+@keyframes rotateOut {
+  from {
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 360deg);
+    opacity: 0;
+  }
+}
+
+.rotateOut {
+  animation-name: rotateOut;
+}
+
+@keyframes moveFromTop {
+  0% {
+    top: 20px;
+  }
+  75% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.moveFromTop {
+  animation-name: moveFromTop;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 3s;
+}
