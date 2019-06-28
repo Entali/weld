@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function Users() {
-  return (
-      <div className="Users">
-        Users
-      </div>
-  );
+class Users extends Component {
+
+  componentDidMount() {
+    const {initUsers} = this.props;
+    initUsers();
+  }
+
+  render() {
+    return (
+        <div className="Users">
+          Users
+        </div>
+    );
+  }
 }
 
 export {Users};

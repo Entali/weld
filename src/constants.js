@@ -1,0 +1,1 @@
+export const API_URL = 'https://simple-rest-weld.herokuapp.com';
