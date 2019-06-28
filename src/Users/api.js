@@ -18,8 +18,14 @@ class APIModel {
     return fetch(`${API_URL}/users`, { method: 'PUT', body: user });
   }
 
-  updateUser(id) {
-    return fetch(`${API_URL}/users/${id}`, { method: 'POST' });
+  updateUser(id, userName) {
+    return fetch(
+      `${API_URL}/users/${id}`,
+      {
+        method: 'POST',
+        body: JSON.stringify({ name: userName })
+      }
+    );
   }
 
   deleteUser(id) {

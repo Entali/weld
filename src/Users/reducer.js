@@ -1,6 +1,6 @@
 // @flow
 import {InitialStateType} from './types';
-import {FETCH_USERS, LOAD_USERS} from './constants';
+import {FETCH_USERS, LOAD_USERS, LOAD_USER} from './constants';
 
 const INITIAL_STATE: InitialStateType = {
   isFetching: false,
@@ -25,6 +25,20 @@ export default (state = INITIAL_STATE, action) => {
         isFetching: false,
         isError: false,
         list: action.payload
+      };
+
+    case LOAD_USER:
+      return {
+        ...state,
+        isFetching: false,
+        isError: false,
+        list: state.list.filter(
+            el => el.id === action.payload.id ? {
+                  ...el,
+                  name: action.payload.name
+                }
+                : el
+        )
       };
 
     default:

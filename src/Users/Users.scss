@@ -1,3 +1,9 @@
 .Users {
   position: relative;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 50px 0;
+  }
 }
