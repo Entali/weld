@@ -5,7 +5,7 @@
   "author": "Nata Entali - entalila@icloud.com",
   "dependencies": {
     "firebase": "^6.2.4",
-    "firebase-tools": "^7.0.2",
+    "firebase-tools": "^11.30.0",
     "flow-bin": "^0.102.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
